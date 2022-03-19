@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제 2</title>
+    
+</head>
+<body>
+    
+    <h1>문제 1</h1>
+    <h2>1~1000 사이의 숫자 중 7의 배수만 합한 값을 반복문, continue를 이용해 표시하시오.</h2>
+    <script>
+        function question1(){
+            var sum=0;
+            for(var i=1; i<=1000; i++){
+                if((i%7)!=0){
+                    continue;
+                }
+                sum+=i;
+            }
+            alert(sum);
+        }
+    </script>
+    <button onclick="question1();">1번 답 확인</button>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1>문제 2</h1>
+    <h2> ECMASCript6를 이용하여 임의의 두 값을 입력 받은 후 ,<br>
+        두 값을 더한 값, 곱한 값을 alert로 출력하시오.</h2>
+    <form>
+    첫번째 입력값 <input name="num1" id="num1" type="number"><br>
+    두번쨰 입력값 <input name="num2" id="num2" type="number"><br>
+    </form>
+
+    <script>
+
+    function sum2(){
+        var num1=Number(document.getElementById("num1").value);
+        var num2=Number(document.getElementById("num2").value);
+        var sum2;
+       
+        sum2=Number(num1+num2);
+        alert(sum2);
+        }
+    function mul(){
+        var num1=Number(document.getElementById("num1").value);
+        var num2=Number(document.getElementById("num2").value);
+        var mul
+       
+        mul=num1*num2;
+        alert(mul);
+        }          
+    
+    </script>
+    <br>
+  
+    <button onclick="sum2();">덧셈 결과</button>
+    <button onclick="mul();">곱한 결과</button>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1>문제 3</h1>
+    <h2>임의의 문자열 두 개를 받아서,<br>
+        두 번째 문자열이 첫 번째 문자열의 문자열에 어느 위치에 있는 매칭되는지 
+        위치 값을 프린트 하시오.</h2>
+
+        <form>
+            첫번째 문자열 입력 <input name="text1" id="text1" type="text"><br>
+            두번쨰 문자열 입력 <input name="text2" id="text2" type="text">
+        </form>
+
+    <script>
+        function position(){
+            var text1=document.getElementById("text1").value;
+            var text2=document.getElementById("text2").value;
+            var output=text1.indexOf(text2);
+             alert(output);
+        }
+    </script>
+    <button onclick="position();">결과 값</button>
+
+</body>
+</html>
